@@ -12,7 +12,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '/home/miksun/Projects/other/lanterna_test/lanterna_db',                      # Or path to database file if using sqlite3.
+        'NAME': 'lanterna_db',                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -103,7 +103,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'lanterna_test.urls'
 
 TEMPLATE_DIRS = (
-    "/home/miksun/Projects/other/lanterna_test/e_learning/templates"
+    "e_learning/templates"
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -146,5 +146,5 @@ LOGGING = {
     }
 }
 
-LOGIN_REDIRECT_URL = '/courses'
+LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = '/login/'
