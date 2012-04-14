@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<ul id="courses">
+{% for uc in userCourses %}
+	<li>{{ uc.course.name }}
+{% endfor %}
+</ul>
+
+Add a course:
+<form action="/save/" method="post">
+	{% csrf_token %}	
+{{ form.as_p }}
+<input type="submit" value="Submit" />
+</form>
+</body>
+</html>
