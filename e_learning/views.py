@@ -6,7 +6,7 @@ from django.template import RequestContext
 
 @login_required
 def index(request):
-	course_list = UserCourse.objects.all()
+	course_list = UserCourse.objects.filter(user=request.user)	
 	form = CourseForm();
 	csrfContext = RequestContext(request)
 	return render_to_response('courseList.html', {"userCourses": course_list,
